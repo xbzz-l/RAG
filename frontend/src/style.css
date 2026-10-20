@@ -1,0 +1,109 @@
+/* 全局样式 */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  background: #f5f7fa;
+}
+
+/* 聊天区滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #909399;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* markdown 回答样式（回答区） */
+.md-body {
+  line-height: 1.75;
+  word-break: break-word;
+  font-size: 14px;
+  color: #303133;
+}
+.md-body h1,
+.md-body h2,
+.md-body h3,
+.md-body h4 {
+  margin: 14px 0 8px;
+  color: #1d3a5f;
+  line-height: 1.4;
+}
+.md-body h1 { font-size: 18px; }
+.md-body h2 { font-size: 16px; }
+.md-body h3,
+.md-body h4 { font-size: 15px; }
+.md-body p {
+  margin: 6px 0;
+}
+.md-body ul,
+.md-body ol {
+  margin: 6px 0;
+  padding-left: 22px;
+}
+.md-body li {
+  margin: 4px 0;
+}
+.md-body code {
+  background: #f0f2f5;
+  color: #c7254e;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: Consolas, Monaco, monospace;
+}
+.md-body pre {
+  background: #282c34;
+  color: #abb2bf;
+  padding: 12px 14px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.md-body pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+.md-body blockquote {
+  margin: 8px 0;
+  padding: 4px 12px;
+  border-left: 3px solid #dcdfe6;
+  color: #909399;
+  background: #fafafa;
+}
+.md-body table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 13px;
+}
+.md-body th,
+.md-body td {
+  border: 1px solid #e4e7ed;
+  padding: 6px 10px;
+  text-align: left;
+}
+.md-body th {
+  background: #f5f7fa;
+  font-weight: 600;
+}
+.md-body strong {
+  color: #1d3a5f;
+}

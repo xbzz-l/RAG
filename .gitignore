@@ -1,0 +1,75 @@
+# ============================================================
+# IT技术栈知识库 —— Git 忽略规则
+# 目的：排除依赖包、运行时数据、密钥与日志，保证仓库体积可控
+# ============================================================
+
+# ---------- Python ----------
+# 虚拟环境（1.3G，含 torch，绝对不要提交）
+.venv/
+venv/
+env/
+ENV/
+backend/.venv/
+
+# 字节码与打包产物
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+
+# 测试与类型检查缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------- Node.js / 前端 ----------
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- 运行时数据（可由 seed_kb 重新生成） ----------
+# SQLite 数据库、ChromaDB 向量库、上传文档留档
+# 目录由 app/config.py 启动时自动创建，无需占位文件
+backend/data/
+
+# ---------- 环境变量与密钥 ----------
+# .env 含管理员密码与 JWT 密钥，只提交 .env.example
+.env
+.env.*
+!.env.example
+
+# ---------- 日志 ----------
+*.log
+logs/
+
+# ---------- IDE / 编辑器 ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------- 操作系统 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ---------- 工具缓存（WorkBuddy 项目数据，非交付内容） ----------
+.workbuddy-ai/

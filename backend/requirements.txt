@@ -1,0 +1,25 @@
+# Web框架
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic-settings>=2.4
+
+# 数据库
+sqlalchemy>=2.0,<3.0
+
+# 认证
+pyjwt>=2.8
+bcrypt>=4.1
+
+# LangChain 生态（RAG核心）
+langchain>=1.0
+langchain-chroma>=1.0
+langchain-ollama>=1.0
+langchain-huggingface>=1.0
+langchain-text-splitters>=1.0
+
+# Embedding模型（自带torch，较大）
+sentence-transformers>=3.0
+
+# 文档解析
+pypdf>=4.2
